@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}index{% endblock title %}
+{% block body %}
+  {% if user.is_activate %}
+    <div class="alert alert-primary" role="alert">
+      login 되었습니다.
+    </div>
+  {% else %}
+    <div class="alert alert-secondary" role="alert">
+      <a href="{% url 'login' %}">login</a>이 필요합니다.
+    </div>
+  {% endif %}
+{% endblock body %}
